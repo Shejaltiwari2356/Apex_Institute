@@ -546,3 +546,140 @@ hr {
         font-size: 22px;
     }
 }
+
+/* --- CONTACT US PAGE STYLES --- */
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Form is wider, details are narrower */
+    gap: 30px;
+}
+
+.contact-form-section h2, .contact-details-section h2 {
+    color: var(--primary-blue);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Contact Form Styling */
+.contact-form input[type="text"], 
+.contact-form input[type="email"], 
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    border-color: var(--primary-blue);
+    outline: none;
+}
+.contact-form .portal-link.faculty {
+    width: auto;
+    display: block;
+    text-align: center;
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* Contact Details */
+.contact-details-section {
+    padding: 10px;
+}
+.contact-details-section .detail-card {
+    border-left: 3px solid var(--secondary-gold);
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #fcfcfc;
+}
+.contact-details-section .detail-card h3 {
+    margin-top: 0;
+    color: var(--dark-text);
+}
+.map-placeholder {
+    height: 250px;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    border-radius: 4px;
+}
+
+/* --- PLACEMENTS PAGE STYLES --- */
+
+.stats-summary-section .stats-cards .m-v-v-card {
+    text-align: center;
+    padding: 25px 15px;
+    border: none;
+    border-bottom: 4px solid var(--primary-blue);
+}
+.stats-summary-section .stats-cards h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent-red);
+}
+.stats-summary-section .stats-cards p {
+    font-size: 16px;
+    margin-top: 5px;
+    color: var(--dark-text);
+}
+
+.company-logo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.company-logo-list li {
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+    padding: 10px 15px;
+    margin: 5px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: var(--primary-blue);
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+/* Ensure the eligibility table style is used for placement stats */
+.stats-table-section .eligibility-table th {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+/* --- RESEARCH PAGE STYLES --- */
+
+.grants-summary .stats-cards .m-v-v-card {
+    border-left: 5px solid var(--secondary-gold);
+    text-align: center;
+}
+.grants-summary .stats-cards h3 {
+    color: var(--primary-blue);
+    font-size: 32px;
+}
+.grants-summary p {
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* --- MEDIA QUERIES for new pages (Add inside existing @media (max-width: 992px)) --- */
+
+@media (max-width: 992px) {
+    /* Contact Page responsive grid */
+    .contact-layout {
+        grid-template-columns: 1fr; /* Stack columns */
+    }
+}
+@media (max-width: 600px) {
+    /* Placement Company List */
+    .company-logo-list {
+        justify-content: center;
+    }
+}
